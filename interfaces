@@ -1,0 +1,49 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+## The primary network interface
+#allow-hotplug eth0
+#iface eth0 inet static
+#	address 10.0.1.4
+#	netmask 255.255.255.0
+#	network 10.0.1.0
+#	broadcast 10.0.1.255
+#	gateway 10.0.1.5
+#	# dns-* options are implemented by the resolvconf package, if installed
+#	dns-nameservers 8.8.8.8 10.0.1.5
+#	dns-search mydomain.example
+
+# The primary network interface
+allow-hotplug eth0
+iface eth0 inet static
+	address 192.168.5.4
+	netmask 255.255.255.0
+	network 192.168.5.0
+	broadcast 192.168.5.255
+	gateway 192.168.5.5
+	# dns-* options are implemented by the resolvconf package, if installed
+	dns-nameservers 8.8.8.8 192.168.5.5
+#	dns-search mydomain.example
+
+# auto wlan0
+# iface wlan0 inet static
+# 	address 10.0.1.4
+# 	netmask 255.255.255.0
+# 	wireless-channel 1
+# 	wireless-essid dk_net2
+# 	wireless-mode ad-hoc
+
+auto wlan2
+iface wlan2 inet dhcp
+
+auto wlan0
+iface wlan0 inet static
+	address 10.0.1.4
+	netmask 255.255.255.0
+#	post-up hostapd -B /etc/hostapd/hostapd.conf

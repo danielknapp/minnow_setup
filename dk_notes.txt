@@ -1,0 +1,32 @@
+# sudo stop network-manager
+
+# dpkg --get-selections > ~/pkg_lst.txt
+# http://askubuntu.com/questions/17823/how-to-list-all-installed-packages
+
+# How to check what version of OS or Kernel you have on Linux
+# https://linuxconfig.org/check-what-debian-version-you-are-running-on-your-linux-system
+# http://askubuntu.com/questions/359574/how-do-i-find-out-the-kernel-version-i-am-running
+# uname -r; uname -a
+# cat /proc/version
+# cat /etc/issue
+# cat /etc/debian_version
+# lsb_release -da
+# hostnamectl
+
+# isovfy command to verify the integrity of a iso9660 filesystem
+# cannot fix though because it is supposed to be read-only
+
+# /etc/apt/sources.list has mirrors and can be modified to get non-free packages, ex:
+# deb http://httpredir.debian.org/debian/ wheezy main contrib non-free
+# apt-get update && apt-get install firmware-realtek
+
+# Sometimes the minnowboard will not reboot with the sudo reboot cmd
+# and gives the following output over serial
+[  493.725542] watchdog watchdog0: watchdog did not!
+[  494.450202] reboot: Restarting system
+# This then requires a hard reset either by unplugging and plugging
+# back in the power or by holding the power button until it shuts off
+
+#
+
+

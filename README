@@ -1,0 +1,9 @@
+This README is primarily a pointer to the script that actually has all of
+the information about what the importance of each file is in line with
+the commands of the script.
+
+Look at dosetup.sh for the details.
+
+It is important to note that some of the files that are copied into /etc
+are specifically configured for the Minnowboard and may not behave the
+same if placed on another board.
